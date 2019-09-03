@@ -1,0 +1,50 @@
+<div>
+    <h1><center>Registro</center></h1>
+
+    
+</div>
+
+<div class="row">
+	
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido Paterni</th>
+      <th scope="col">Apellido Materno</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php if(count($posts)>0):?>
+    	<?php foreach ($posts as $posts):?>
+		<tr>
+	      <td ><?php echo $post->getId();?></td>
+	      <td ><?php echo $post->getNombre();?></td>
+	      <td ><?php echo $post->getApPat();?></td>
+	      <td ><?php echo $post->getApMat();?></td>  
+	      <td><a href="" class="label label-success">VIEW</a></td>
+
+	      <td><a href="" class="label label-default">Update/a></td>
+
+	      <td><a href="" class="label label-danger">Delete</a></td>
+
+
+	    </tr>
+	<?php endforeach;?>
+  <?php else:?>
+  	<tr>
+  		<td>No Records Foundl</td>
+  	</tr>
+  <?php endif?>
+   
+</table>
+
+</div>
+
+<?php
+
+foreach ($posts as $posts) {
+	echo $posts->getNombre();
+}
+?>
